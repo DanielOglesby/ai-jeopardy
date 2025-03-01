@@ -33,7 +33,7 @@ export function createEmptyGameBoard(): GameBoard {
 export function updateCategoryName(
   gameBoard: GameBoard,
   categoryId: string,
-  name: string
+  name: string,
 ): GameBoard {
   return {
     ...gameBoard,
@@ -52,7 +52,7 @@ export function updateCategoryName(
 // Reveal a question on the game board
 export function revealQuestion(
   gameBoard: GameBoard,
-  questionId: string
+  questionId: string,
 ): GameBoard {
   return {
     ...gameBoard,
@@ -75,7 +75,7 @@ export function revealQuestion(
 
 // Generate questions for all categories
 export async function generateQuestionsForBoard(
-  gameBoard: GameBoard
+  gameBoard: GameBoard,
 ): Promise<GameBoard> {
   const categories = [...gameBoard.categories];
 
@@ -92,7 +92,7 @@ export async function generateQuestionsForBoard(
         try {
           const response = await generateQuestion(
             category.name,
-            question.value
+            question.value,
           );
 
           // Update the question with generated content
@@ -104,7 +104,7 @@ export async function generateQuestionsForBoard(
         } catch (error) {
           console.error(
             `Error generating question for ${category.name}, value ${question.value}:`,
-            error
+            error,
           );
         }
       }

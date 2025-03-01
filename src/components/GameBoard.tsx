@@ -1,7 +1,7 @@
-import React from 'react';
-import { GameBoard as GameBoardType } from '@/types';
-import QuestionCard from './QuestionCard';
-import CategoryHeader from './CategoryHeader';
+import React from "react";
+import { GameBoard as GameBoardType } from "@/types";
+import QuestionCard from "./QuestionCard";
+import CategoryHeader from "./CategoryHeader";
 
 interface GameBoardProps {
   gameBoard: GameBoardType;
@@ -17,7 +17,7 @@ const GameBoard: React.FC<GameBoardProps> = ({
   onRevealQuestion,
 }) => {
   return (
-    <div className="grid grid-cols-5 gap-2 w-full max-w-6xl mx-auto p-4">
+    <div className="grid grid-cols-5 gap-1 xs:gap-2 w-full max-w-6xl mx-auto p-2 xs:p-4">
       {/* Category Headers */}
       {gameBoard.categories.map((category) => (
         <CategoryHeader
@@ -27,7 +27,7 @@ const GameBoard: React.FC<GameBoardProps> = ({
           onCategoryChange={onCategoryChange}
         />
       ))}
-      
+
       {/* Questions Grid */}
       {[0, 1, 2, 3, 4].map((rowIndex) => (
         <React.Fragment key={`row-${rowIndex}`}>

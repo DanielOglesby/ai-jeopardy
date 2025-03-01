@@ -29,6 +29,7 @@ A NextJS application that lets users create custom Jeopardy-style games with AI-
 ## API Integration
 
 Using OpenAI API to generate questions based on:
+
 - Category name
 - Difficulty level (mapped to point values)
 - Knowledge domain constraints

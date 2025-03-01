@@ -15,26 +15,26 @@
     transition-all duration-300 perspective-1000 transform-gpu;
     height: 100%;
   }
-  
+
   .jeopardy-card-front {
     @apply absolute w-full h-full backface-hidden flex items-center justify-center;
     transition: transform 0.5s;
   }
-  
+
   .jeopardy-card-back {
     @apply absolute w-full h-full backface-hidden bg-jeopardy-card p-2 overflow-auto;
     transform: rotateY(180deg);
     transition: transform 0.5s;
   }
-  
+
   .jeopardy-card.flipped .jeopardy-card-front {
     transform: rotateY(180deg);
   }
-  
+
   .jeopardy-card.flipped .jeopardy-card-back {
     transform: rotateY(0deg);
   }
-  
+
   .category-input {
     @apply p-2 bg-transparent border-b-2 border-jeopardy-gold text-white text-center 
     focus:outline-none focus:border-white;
@@ -45,15 +45,15 @@
   .perspective-1000 {
     perspective: 1000px;
   }
-  
+
   .backface-hidden {
     backface-visibility: hidden;
   }
-  
+
   .transform-gpu {
     transform: translate3d(0, 0, 0);
   }
-  
+
   .rotateY-180 {
     transform: rotateY(180deg);
   }
